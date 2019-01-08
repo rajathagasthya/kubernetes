@@ -27,6 +27,10 @@ import (
 	"sigs.k8s.io/yaml"
 )
 
+func init() {
+	jsonpatch.SupportNegativeIndices = false
+}
+
 type FilterNullTestCases struct {
 	TestCases []FilterNullTestCase
 }
